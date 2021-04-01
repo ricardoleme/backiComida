@@ -1,0 +1,63 @@
+//Teste de requisições - Restaurante
+
+@baseURL = http://localhost:4000
+@id = 6065167df1dcd1052127dc38
+
+###
+// GET - Lista os restaurantes
+GET {{baseURL}}/restaurantes
+Content-Type: application/json
+
+###
+// GET - Lista o restaurante pelo ID
+GET {{baseURL}}/restaurantes/{{id}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo restaurante
+POST {{baseURL}}/restaurantes
+Content-Type: application/json
+
+{
+  "nome" : "Restaurante dos Meninos",
+  "status" : "ativo",
+  "foto": {
+       "originalname": "fachada.png", 
+       "path": "publics/uploads/fachada.png",
+       "size": 45318, 
+       "mimetype":"image/png"
+  }, 
+  "notaMedia" : 4.7,
+  "categoria" :"6064fdfe45d3970342761d53",
+  "faixaPreco" : "barato",
+  "tempoEntrega" : "45 a 60min",
+  "telefone": "(11)4013-1768",
+  "endereco": {
+    "logradouro": "Praça da Independência, 224",
+    "bairro": "Centro",
+    "cep": "13300000",
+    "municipio": "Itu",
+    "estado": "SP",
+    "complemento": "" 
+  },
+  "geoLocalizacao": {
+      "latitude" : -23.265370,
+      "longitude": -47.298160
+  }
+}
+
+###
+// DELETE - Apaga um restaurante
+DELETE {{baseURL}}/restaurantes/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Altera o restaurante
+PUT {{baseURL}}/restaurantes
+Content-Type: application/json
+
+{
+"_id" : "6064fdfe45d3970342761d53",
+"nome" : "Churrascaria",
+"status": "ativo"
+}
