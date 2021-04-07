@@ -10,7 +10,10 @@ const Restaurante = require('../model/Restaurante')
 **************************************/
 router.get('/', async(req, res)=> {
     try{
-     const restaurantes = await Restaurante.find({"status":"ativo"}).sort({nome: 1})
+     const restaurantes = await Restaurante
+                                .find({"status":"ativo"})
+                                .sort({nome: 1})
+                                .populate("categoria", "nome")
      res.json(restaurantes)
     }catch (err){
         res.status(500).send({
@@ -33,6 +36,25 @@ router.get('/:id', async(req, res)=> {
         })
     }
 })  
+
+/********************************************
+* Lista um restaurante pelo id da Categoria
+* GET /restaurantes/categoria/:id
+*********************************************/
+router.get('/categoria/:id', async(req, res)=> {
+    try{
+     const restaurantes = await Restaurante
+                               .find({"categoria":req.params.id})
+                               .sort({nome: 1})
+                               .populate("categoria","nome")
+     res.json(restaurantes)
+    }catch (err){
+        res.status(500).send({
+            errors: [{message: `Não foi possível obter o restaurante com o id da categoria ${req.params.id}`}]
+        })
+    }
+})  
+
 
 /*************************************
 * Inclui um novo restaurante
