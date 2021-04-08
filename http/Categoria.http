@@ -1,7 +1,7 @@
 //Teste de requisições - Categoria
 
 @baseURL = http://localhost:4000
-@id = 605bdec9af0d1ba9869f70df
+@id = 6064fdfe45d3970342761d53
 
 ###
 // GET - Lista as categorias
@@ -18,7 +18,30 @@ Content-Type: application/json
 POST {{baseURL}}/categorias
 Content-Type: application/json
 
-{"nome": "Churrascaria", "status": "ativo"}
+{"nome": "Cantinas", 
+"status": "ativo",
+"foto": {
+       "originalname": "massas.png", 
+       "path": "publics/uploads/massas.png",
+       "size": 20771, 
+       "mimetype":"image/png"
+  }
+}
+
+###
+// POST - Inclui uma nova categoria
+POST {{baseURL}}/categorias
+Content-Type: application/json
+
+{"nome": "Churrascarias", 
+"status": "ativo",
+"foto": {
+       "originalname": "fire.png", 
+       "path": "publics/uploads/fire.png",
+       "size": 19873, 
+       "mimetype":"image/png"
+  } 
+}
 
 ###
 // DELETE - Apaga uma categoria
