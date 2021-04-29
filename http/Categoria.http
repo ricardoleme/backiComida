@@ -22,7 +22,7 @@ Content-Type: application/json
 "status": "ativo",
 "foto": {
        "originalname": "massas.png", 
-       "path": "publics/uploads/massas.png",
+       "path": "public/uploads/massas.png",
        "size": 20771, 
        "mimetype":"image/png"
   }
@@ -37,7 +37,7 @@ Content-Type: application/json
 "status": "ativo",
 "foto": {
        "originalname": "fire.png", 
-       "path": "publics/uploads/fire.png",
+       "path": "public/uploads/fire.png",
        "size": 19873, 
        "mimetype":"image/png"
   } 
