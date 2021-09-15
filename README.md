@@ -5,6 +5,7 @@
    * [2. Pré Requisitos](#2-pré-requisitos) 
    * [3. Pacotes Necessários](#3-pacotes-necessários)
    * [4. Inicializando o projeto](#4-inicializando-o-projeto)
+   * [5. Demo](#5-demo)
 ----
 
 
@@ -71,11 +72,15 @@ Para iniciar este projeto, utilizaremos o nodemon (ele efetua o _hot reload_)
 
 ```
 npm i
-nodemon
+nodemon src/index.js
 
 ```
 
 Renomeie o arquivo .env-exemplo para .env e informe a sua string de conexão do MongoDb e as demais informações necessárias.
+
+### 5. Demo
+Veja um demo da API rodando no Heroku
+(https://backicomida.herokuapp.com/)
 
 ## Licença
 [MIT](https://choosealicense.com/licenses/mit/)
