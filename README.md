@@ -81,3 +81,6 @@ Renomeie o arquivo .env-exemplo para .env e informe a sua string de conexão do 
 [MIT](https://choosealicense.com/licenses/mit/)
 
 Apoie o software livre! 🐧
+
+## To do
+Swagger Documentation - Example: (https://github.com/davibaltar/example-swagger-autogen-with-router)
