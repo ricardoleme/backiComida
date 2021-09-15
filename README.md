@@ -50,14 +50,10 @@ Poderemos usar esse ** token ** para nos autenticar nas páginas seguras da noss
 
 5. **mongoose**
 Mongoose é o nosso framework para integrar com o MongoDB.
-Por questões de compatibilidade, utilizaremos a versão 5.11.15, instalando da seguinte forma:
-```
-npm i mongoose@5.11.15
-```
 
 6. **nodemon**
 O nodemon é uma daquelas ferramentas de grande utilidade para quem trabalha com `nodejs`
-Basicamente ele é um _file watcher_ que roda internamente o próprio comando **node**. A diferença entre usá-lo ou usar o comando **node** é que ele faz auto-restart da aplicação, toda vez que um arquivo do projeto for modificado.
+Basicamente ele é um _file watcher_ que roda internamente o próprio comando **node**. A diferença entre usá-lo ou usar o comando **node** é que ele faz _auto-restart_ da aplicação, toda vez que um arquivo do projeto for modificado.
 
 7. **dotenv**
 O **dotenv** permite a criação de variáveis de ambiente. 
