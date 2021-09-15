@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const auth = require('../middleware/auth')
 const { check, validationResult }  = require('express-validator')
 
 const Restaurante = require('../model/Restaurante')
@@ -8,7 +9,7 @@ const Restaurante = require('../model/Restaurante')
 * Lista todos os restaurantes
 * GET /restaurantes
 **************************************/
-router.get('/', async(req, res)=> {
+router.get('/', auth, async(req, res)=> {
     try{
      const restaurantes = await Restaurante
                                 .find({"status":"ativo"})

@@ -2,7 +2,7 @@
 
 @baseURL = http://localhost:4000
 @id = 6065167df1dcd1052127dc38
-@idCategoria = 6064fdfe45d3970342761d53
+@idCategoria = 614243012c76cf0e5138a1c4
 
 ###
 // GET - Lista os restaurantes
@@ -34,7 +34,7 @@ Content-Type: application/json
        "mimetype":"image/png"
   }, 
   "notaMedia" : 4.7,
-  "categoria" :"6064fdfe45d3970342761d53",
+  "categoria" :"614243012c76cf0e5138a1c4",
   "faixaPreco" : "barato",
   "tempoEntrega" : "45 a 60min",
   "telefone": "(11)4013-1768",

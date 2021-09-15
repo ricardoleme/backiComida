@@ -4,6 +4,7 @@ const InicializaMongoServer = require('./config/Db')
 //Definindo as rotas da aplicação
 const rotasCategoria = require('./routes/Categoria')
 const rotasRestaurante = require('./routes/Restaurante')
+const rotasUsuario = require('./routes/Usuario')
 const rotaUpload = require('./routes/Upload')
 
 //Inicializamos o servidor MongoDB
@@ -36,12 +37,14 @@ app.use(express.json())
 
 app.get('/', (req, res) => {  
     res.json({mensagem: "API iComida 100% funcional! 👏",
-              versao: '1.0.2'})
+              versao: '1.0.3'})
 })
 /* Rotas da Categoria*/
 app.use('/categorias', rotasCategoria)
 /* Rotas do Restaurante */
 app.use('/restaurantes', rotasRestaurante)
+/* Rotas do Usuário */
+app.use('/usuarios', rotasUsuario)
 /* Rotas do conteúdo público */
 app.use('/public', express.static('public'))
 /* Rota do upload */
